@@ -1,18 +1,28 @@
 """
- ____ 
-|____|
-|____|
+  __ 
+|__|
+|__|
 
 """
 
-register = [] * 7
-test_register = [1, 0, 1, 1, 0, 1, 1]
-register = test_register
+num_ref = { # This is a reference dictionary where numbers, like 8, are connected with their assosiated register codes
+    1 : [0, 0, 0, 1, 0, 0, 1],
+    2 : [1, 0, 1, 1, 1, 1, 0],
+    3 : [1, 0, 1, 1, 0, 1, 1],
+    4 : [0, 1, 1, 1, 0, 0, 1],
+    5 : [1, 1, 1, 0, 0, 1, 1],
+    6 : [0, 1, 1, 0, 1, 1, 1],
+    7 : [1, 0, 0, 1, 0, 0, 1],
+    8 : [1, 1, 1, 1, 1, 1, 1],
+    9 : [1, 1, 1, 1, 0, 0, 1],
+    0 : [1, 1, 0, 1, 1, 1, 1]
+}
+register = num_ref[4]
 
 if register[0] == 1:
-    print (" ____")
+    print (" __")
 else:
-    print ("    ")
+    print ("   ")
 
 if register[1] == 1:
     print ("|", end="")  # This ensures that the below will not be on a new line
@@ -20,9 +30,9 @@ else:
     print (" ", end="")
 
 if register[2] == 1:
-    print ("____", end="")
+    print ("__", end="")
 else:
-    print ("    ", end="")
+    print ("  ", end="")
 
 if register[3] == 1:
     print ("|")
@@ -35,10 +45,11 @@ else:
     print (" ", end="")
 
 if register[5] == 1:
-    print ("____", end="")
+    print ("__", end="")
 else:
-    print ("    ", end="")
+    print ("  ", end="")
 
 if register[6] == 1:
     print ("|")
 else:
+    print (" ")
