@@ -1,9 +1,4 @@
 
-led = input("give a number (seperate by space)").split()
-list = []
-list.append(led)
-print (list)
-
 def ascii1(): 
 	led = """\
 	|
@@ -94,6 +89,8 @@ def ascii0():
 	"""
 	print (led)
 
+led = input("give a number (seperate by space)")
+list(led)
 
 if "1" in led:
 	ascii1()
